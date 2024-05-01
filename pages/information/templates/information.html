@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('information.static', filename='css/information.css')}}">
+</head>
+<body>
+    <form method="POST" action="/sendData">
+  <input id = "name" type="text" value= '{{ name | default("")}}' name="name" placeholder="שם מלא   ">
+  <input id ="phone" type = "tel" value='{{phone | default("")}}' name="phone"  placeholder=" טלפון ">
+  <input id = "submit" type="submit">
+        </form>
+    <script src="{{ url_for('information.static', filename='js/information.js')}}"></script>
+    <script>
+        console.log(error)
+        if (error !== 'none'){alert(error);}
+    </script>
+</body>
+</html>
+
+
+

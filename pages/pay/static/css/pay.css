@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10vh;
+}
+
+/*the style of the buttons*/
+body button {
+    border: white 5px solid;
+    border-radius: 5vh;
+    background-color: black;
+    color: white;
+    width: 60vw;
+    height: 30vh;
+
+    transform: translateZ(0) scale(1);
+    transition: transform .5s;
+    transition-property: all;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+/*old animation and the image changes*/
+body button:nth-child(1) {
+    background-image: url("/static/media/photo/p_c_w.png");
+    background-size: contain; /* or contain, or specify a width and height */
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+body button:nth-child(2) {
+    background-image: url("/static/media/photo/p_b_w.png");
+    background-size: contain; /* or contain, or specify a width and height */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+body button:nth-child(1):not(:disabled):hover {
+    transform: scale(1.1);
+    background-color: white;
+    background-image: url("/static/media/photo/p_c_b.png");
+}
+
+body button:nth-child(2):not(:disabled):hover {
+    transform: scale(1.1);
+    background-color: white;
+    background-image: url("/static/media/photo/p_b_b.png");
+}
+
+
+
+

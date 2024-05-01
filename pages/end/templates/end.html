@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{{url_for('end.static', filename='css/end.css') }}">
+</head>
+<body>
+<!--display the order-->
+     {% for k, v in order.items() %}
+     <div>
+     <p>{{k}}</p>
+     <p id = {{k}}> {{v}}</p>
+     </div>
+     <br>
+     {% endfor %}
+</body>
+</html>

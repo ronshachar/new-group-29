@@ -1,0 +1,50 @@
+<head>
+    <meta charset="UTF-8">
+    <title>264 BURGER HOME</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Button.css')}}">
+    <link rel="stylesheet" href="{{url_for('homepage.static', filename='css/home.css') }}">
+</head>
+<body>
+
+<header>
+<img id="home" class=Button src="/static/media/photo/home-button.svg">
+</header>
+{% block main%}
+<main>
+
+</main>
+{% endblock %}
+<aside>
+    <div id="memu_top">
+        <h1 id="memu_top_text" > memu </h1>
+    </div>
+
+    <div id="menu"></div>
+
+    <div id="menu_bottom">
+        <button id=pay class="Button"> לתשלום</button>
+        {% block menu_bottom %}
+        {% endblock %}
+
+    </div>
+
+</aside>
+<footer>
+    <p id="orderData" , class="OrderMonitor">
+        order number : {{session.get('id')}}
+        <br>
+        total price is : 0
+    </p>
+</footer>
+
+<!--parameters for script-->
+<script>
+    const orderNumber = {{session.get('id') | tojson}}
+    const old_order = {{order | tojson}}
+    const products  = {{ data_products | tojson }}
+</script>
+<script src="{{ url_for('homepage.static', filename='js/OrderProduct.js') }}"></script>
+<script src="{{ url_for('homepage.static', filename='js/home.js') }}"></script>
+{% block page_body_js %}{% endblock %}
+</body>
+</html>

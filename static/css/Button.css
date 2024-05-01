@@ -1,0 +1,25 @@
+
+/*the style of all buttons*/
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  border-color: black;
+  cursor: pointer;
+  transform: translateZ(0) scale(1);
+  transition: transform .5s;
+
+}
+
+/*the simulation of all the buttons*/
+.Button:hover {
+  transform: scale(1.1);
+}
+
+.Button:hover:active {
+  transform: scale(1.1) translateY(.125rem);
+}

@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+
+{% block main %}
+<link rel="stylesheet" href="{{url_for('home_subpage.static', filename='css/hamburger.css')}}">
+
+<main id='hamburger_body'>
+    <div id="hamburger">
+        <img src="/static/media/photo/topping/top_ban.png ">
+        <div id="hamburgerMenu">
+        </div>
+        <img src="/static/media/photo/topping/bottom_ban.gif">
+    </div>
+
+    <div id="topping">
+        <h1>topping</h1>
+    </div>
+</main>
+{% endblock %}
+{% block menu_bottom %}
+<button id="save" class="Button"> שמור הזמנה</button>
+{% endblock %}
+{% block page_body_js %}
+<script>const toppings = {{data_toppings | tojson}}
+;</script>
+<script>const defaultTopping = {{data_defaultTopping | tojson}}
+;</script>
+<script src="{{url_for('home_subpage.static', filename='js/hamburger.js')}}"></script>
+
+
+{% endblock %}

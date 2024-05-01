@@ -1,0 +1,139 @@
+
+body {
+
+    background: black;
+    display: grid;
+    grid-template-areas:
+    " header  header"
+    " main aside"
+    " footer aside";
+    height: 98vh;
+    width: 98vw;
+    grid-template-columns:4fr 1fr;
+    grid-template-rows: 7% 73% 20%;
+    gap: 2px;
+
+
+}
+
+header {
+    display: flex;
+    grid-area: header;
+    background-image: url("/static/media/photo/symbol.jpeg");
+    background-size: contain;
+    background-position: center center;
+    justify-content: end;
+    gap: 5px;
+    margin-bottom: 1vh;
+    overflow: clip;
+}
+
+footer {
+    display: flex;
+    grid-area: footer;
+    background: #ffffff;
+    margin-top: 1.5%;;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 0.5%;
+
+}
+
+/*the order display in the footer*/
+.OrderMonitor {
+    font-size: 1.7vh;
+    font-family: Arial sans-serif;
+    color: black;
+    width: 15vh;
+    min-width: 15vh;
+    height: 10vh;
+    overflow: hidden;
+    transition: transform .5s;
+    transition-property: all;
+}
+
+.OrderMonitor:hover {
+    background-color: black;
+    color: white;
+}
+main {
+    grid-area: main;
+    background-image: url("/static/media/photo/main_background.jpg");
+    background-size: cover;
+
+}
+aside {
+    display: grid;
+    grid-template-rows: 5% 75% 20%;
+    align-items: center;
+    grid-area: aside;
+    background: #ffffff;
+    margin-left: 5%;
+
+}
+
+/*the box of the title of the menu in the aside*/
+#memu_top_text {
+    font-family: Arial sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 6vh;
+
+
+}
+
+/*the box how contain the aside menu of products */
+#menu {
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow: scroll;
+    overflow-x: hidden;
+
+
+}
+
+#menu .Button {
+    margin: 6%;
+}
+
+/*the prices of aside menu  products */
+.productPrice {
+    box-sizing: inherit;
+    margin: 0;
+    text-align: center;
+    font-family: Arial sans-serif;
+    font-size: 30px;
+}
+/*menu scroll bar*/
+#menu::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+
+}
+
+#menu::-webkit-scrollbar-thumb {
+    background-color: black; /* Set the color of the scrollbar track */
+    border-radius: 3px;
+}
+
+#menu_bottom {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#menu_bottom button {
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 2vw;
+
+
+}
+/*home button*/
+#home{
+    margin-right: 10px;
+}

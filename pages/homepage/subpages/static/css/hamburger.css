@@ -1,0 +1,105 @@
+
+
+/*set all margin: 0;*/
+* {margin: 0;}
+
+#hamburger_body {
+    display: grid;
+    grid-template-columns:6fr 5fr;
+}
+
+ /*the price display of the topping*/
+.Topping_price {
+
+    font: 1.5rem "Arial", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 1vw;
+
+}
+
+
+#hamburger {
+    margin: 3% 0;
+    justify-items: center;
+    display: grid;
+    grid-template-rows: 15% 75% 10%;
+    max-height: 90vh;
+    max-width: 90vw;
+}
+
+/*contain all the talking in the hamburger*/
+#hamburgerMenu {
+    object-fit: contain;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*the ban images*/
+#hamburger img {
+    width: 60%;
+    max-width: 20vh;
+    max-height: 80vw;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* all the talking images in the hamburger*/
+#hamburgerMenu img {
+    transition: transform .5s;
+    cursor: pointer;
+    max-width: 35vh;
+    max-height: 80vw;
+}
+
+/*contain all the talking in the nemu*/
+#topping {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1%;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+
+/*the topping images in the menu*/
+#topping img {
+    width: 70%;
+    max-width: 30vh;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform .5s;
+    cursor: pointer;
+
+}
+
+#topping::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+#topping::-webkit-scrollbar-thumb {
+    background-color: #000000; /* Set the color of the scrollbar thumb */
+    border-radius: 6px;
+}
+
+#topping::-webkit-scrollbar-track {
+    background-color: inherit; /* Set the color of the scrollbar track */
+}
+
+
+/*the topping animation*/
+#hamburgerMenu img:hover {
+    transform: scale(1.1);
+}
+
+#topping img:hover {
+    transform: scale(1.1);
+}
+
+
+

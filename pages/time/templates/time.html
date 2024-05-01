@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('time.static', filename='css/time.css')}}">
+</head>
+<body>
+    <h1> :בחר שעת איסוף</h1>
+    <main>
+    </main>
+    <!--parameters for script-->
+    <script>const times  = {{ times | tojson }};</script>
+    <script src="{{ url_for('time.static', filename='/js/time.js')}}"></script>
+</body>
+</html>
